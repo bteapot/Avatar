@@ -80,7 +80,8 @@ extension Avatar.Text {
                 
             case let .components(components):
                 // тут всё просто
-                return PersonNameComponentsFormatter.localizedString(from: components, style: .abbreviated)
+                let initials = PersonNameComponentsFormatter.localizedString(from: components, style: .abbreviated)
+                return String(initials.prefix(2))
         }
     }
     
