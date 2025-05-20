@@ -134,7 +134,7 @@ extension Avatar {
         }
         
         // убедимся, что есть инициалы
-        let initials = text.initials
+        let initials = text.initials.uppercased()
         
         guard initials.isEmpty == false else {
             return placeholder
